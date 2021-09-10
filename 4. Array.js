@@ -35,3 +35,4 @@ console.log(arr);// [ 'kiwi', 'apple', 'pear', 'orange', 'banana' ]
 console.log(arr.shift()); // 'kiwi' 삭제
 console.log(arr);// [ 'apple', 'pear', 'orange', 'banana' ]
 
+// 3. splice(): 요소를 삭제하거나 교체
