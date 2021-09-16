@@ -1,9 +1,12 @@
 'use strict';
 
+// 0. Array
+
 let arr = [1, 2, 3, 4];
 
 console.log(arr); // [1, 2, 3, 4]
 console.log(arr[0]); // 1
+
 
 
 
@@ -40,6 +43,7 @@ console.log(arr);// [ 'kiwi', 'apple', 'pear', 'orange', 'banana' ]
 
 console.log(arr.shift()); // 'kiwi' 삭제
 console.log(arr);// [ 'apple', 'pear', 'orange', 'banana' ]
+
 
 
 
@@ -95,6 +99,8 @@ console.log(words.filter(x => x.length > 4)); // [ 'hardy', 'dicaprio' ]
 console.log(words.filter(x => x.length > 3)); // [ 'hardy', 'dicaprio', 'mary', 'jane' ]
 
 
+
+
 // 7. flat() 
 //! No Mutation
 let matrix = [1, 2, 3, [1, 2, 3, [10, 20]]];
@@ -121,3 +127,54 @@ let arr = [1, 2, 3, 4, 5];
 
 console.log(arr.join('!')); // '1!2!3!4!5'
 console.log(arr.join('--a')); // '1--a2--a3--a4--a5'
+
+
+
+
+// 10. map(): 배열을 순회하며 함수를 실행한 결과로 새로운 배열을 만들어 반환한다.
+
+let arr = [1, 2, 3, 4, 5];
+let arrTwo = ['1', '2', '3', '4', '5'];
+
+function coding(x){
+  return x**2;
+}
+
+console.log(arr.map(coding)); // [1, 4, 9, 16, 25]
+
+console.log(arr.map(x => parseInt(x, 10))); // [1, 2, 3, 4, 5]
+
+
+
+
+// 11. sort(): 배열을 정렬 후 반환한다.
+
+let arr = [1, 2, 100, 10, 222, 3];
+
+// sort()는 유니코드에 따라 정렬한다.
+console.log(arr.sort()); //[1, 10, 100, 2, 222, 3]
+
+// 오름차순으로 정렬하기
+let score = [40, 80, 75, 90, 35, 81];
+
+score.sort((a, b) => {
+  return a - b;
+});
+
+console.log(score); // [35, 40, 75, 80, 81, 90]
+
+// 내림차순으로 정렬하기
+score.sort((a, b) => {
+  return b - a;
+});
+
+console.log(score); // [ 90, 81, 80, 75, 40, 35 ]
+
+
+
+
+// 12. reverse(): 배열을 역순으로 정렬해서 반환한다.
+let arr = [1, 2, 3, 4, 5];
+console.log(arr.reverse()); // [5, 4, 3, 2, 1]
+
+
