@@ -178,3 +178,54 @@ let arr = [1, 2, 3, 4, 5];
 console.log(arr.reverse()); // [5, 4, 3, 2, 1]
 
 
+
+
+// Set Function
+// 1. set(): 중복값을 제외한 유일한 값을 저장한다.
+
+let arr = [1, 1, 2, 2, 3, 3, 3, 100, 100];
+let doSet = new Set(arr);
+
+console.log(doSet);  // {1, 2, 3, 100}
+
+// Set의 크기는 length가 아닌 size를 통해 구할 수 있다.
+console.log(doSet.size); // 4
+console.log(doSet.length); // undefined
+
+//! 변수에 Set 함수를 할당하지 않으면 에러가 출력된다.
+let arrSet = [1,3,3,4,5,7];
+console.log(arrSet.has(100)); // TypeError: arrSet.has is not a function
+
+
+//! 변수에 Set 함수를 할당해줘야 has, add, delete, clear 메소드들을 사용할 수 없다.
+let doSet = new Set([1,3,3,4,5,7]) 
+console.log(doSet.has(100)); // false
+
+// --------------------------------------------------------------------
+
+let doSet = new Set([1, 3, 5, 7, 9]);
+
+// 1) .has(): 해당 값을 가지고 있는지 확인하고 boolean 값으로 출력한다.
+console.log(doSet.has(6)); // false
+console.log(doSet.has(7)); // true
+
+
+// 2) .add(): 새로운 요소를 추가한다.
+console.log(doSet.add(100)); // {1, 3, 5, 7, 9, 100}
+console.log(doSet.has(100)); // true
+
+
+// 3) .delete(): 해당 요소를 제거한다.
+// 
+doSet.delete(100); 
+console.log(doSet) // {1, 3, 5, 7, 9}
+console.log(doSet.has(100)) // false
+
+
+// 4) .clear(): 모든 요소를 제거한다.
+doSet.clear();
+console.log(doSet) // {}
+
+
+
+
