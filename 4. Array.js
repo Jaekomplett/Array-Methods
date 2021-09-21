@@ -179,8 +179,8 @@ console.log(arr.reverse()); // [5, 4, 3, 2, 1]
 
 
 
-
-// Set Function
+// --------------------------------------------------------------------
+// Set Object
 // 1. set(): 중복값을 제외한 유일한 값을 저장한다.
 
 let arr = [1, 1, 2, 2, 3, 3, 3, 100, 100];
@@ -200,8 +200,9 @@ console.log(arrSet.has(100)); // TypeError: arrSet.has is not a function
 //! 변수에 Set 함수를 할당해줘야 has, add, delete, clear 메소드들을 사용할 수 없다.
 let doSet = new Set([1,3,3,4,5,7]) 
 console.log(doSet.has(100)); // false
-
 // --------------------------------------------------------------------
+
+
 
 let doSet = new Set([1, 3, 5, 7, 9]);
 
