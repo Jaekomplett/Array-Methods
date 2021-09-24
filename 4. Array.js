@@ -287,3 +287,18 @@ for (let i of score) {
 //   0: "Physic"
 //   1: 100
 //   length: 2
+
+
+// --------------------------------------------------------------------
+// String
+
+let str = 2;
+let strTwo = 'two';
+let strThree = "둘";
+
+console.log(strTwo);    //'two'
+console.log(strThree);  //'둘'
+
+//템플릿 리터럴
+console.log(`${str}는 ${strTwo}이고 ${strThree}이다.`);
+//2는 two이고 둘이다.
