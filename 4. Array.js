@@ -302,3 +302,55 @@ console.log(strThree);  //'둘'
 //템플릿 리터럴
 console.log(`${str}는 ${strTwo}이고 ${strThree}이다.`);
 //2는 two이고 둘이다.
+
+
+// 이스케이프 문자
+// \n : Enter(한 칸 띄우기)
+// \t : 탭
+// \v : 세로 탭
+// \' : 작은 따옴표
+// \" : 큰 따옴표
+// \\ : 역슬래시
+
+
+
+// 1. concat()
+let str = 'welcome to';
+
+console.log(str.concat(' coding class'));
+//'welcome to coding class'
+
+
+
+// 2. includes()
+let str = 'abc abcd asbcde ab cd def';
+
+console.log(str.includes('abc')); //true
+console.log(str.includes('fgh')); //false
+
+
+
+
+// 3. split() : 문자열을 지정된 구분자로 나눈 후 배열로 반환한다.
+let str = '복잡한 세상 편하게 살자';
+
+console.log(str.split(' ')); 
+// [ '복잡한', '세상', '편하게', '살자' ]
+
+
+
+// 4. replace() : 특정 패턴에 일치하는 문자열을 교체할 수 있다.
+let str = 'abc abcd abcde ab cd def';
+
+console.log(str.replace('abc', 'A')); 
+// 'A abcd abcde ab cd def'
+
+//정규 표현식을 사용해 전역으로 교체하기
+console.log(str.replace(/abc/g, '!')); 
+// '! !d !de ab cd def'
+
+console.log(str.replace(/ /g, '-')); 
+// 'abc-abcd-abcde-ab-cd-def'
+
+
+// --------------------------------------------------------------------
