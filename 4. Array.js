@@ -353,4 +353,39 @@ console.log(str.replace(/ /g, '-'));
 // 'abc-abcd-abcde-ab-cd-def'
 
 
-// --------------------------------------------------------------------
+
+// 5. slice(): 인덱스를 기준으로 문자열을 잘라내 반환한다.
+// 6. indexOf(): 주어진 문자열과 첫번째로 만나는 문자열의 인덱스를 반환한다.
+let str = '딱히 적을 것이 생각나지 않는다';
+
+console.log(str.indexOf('생각')); //9
+console.log(str.slice(9,11)); // '생각'
+
+console.log(str.slice(9,14)); // '생각나지 '
+
+
+
+// 7. match(): 문자열에서 정규식과 매치되는 부분을 검색하고 배열로 반환한다.
+let str = 'abc abcd abcde ab cd def ABC';
+let lower = /abc/g // 전역에서 소문자만 찾는다.
+let lowerUpper = /abc/gi // 전역에서 대소문자 구별하지 않고 찾는다
+
+console.log(str.match(lower));
+console.log(str.match(lowerUpper));
+
+
+
+// 8. toLowerCase() / toUpperCase(): 대소문자로 변환한다.
+let str = 'abcDEFghiJKlmnoPqR';
+
+console.log(str.toLowerCase()); // 'abcdefghijklmnopqr'
+console.log(str.toUpperCase()); // 'ABCDEFGHIJKLMNOPQR'
+
+// 대소문자 판별하기
+let str = 'apple';
+
+if(str === str.toLowerCase()){
+  console.log('소문자');
+} else {
+  console.log('대문자')
+}
