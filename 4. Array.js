@@ -389,3 +389,11 @@ if(str === str.toLowerCase()){
 } else {
   console.log('대문자')
 }
+
+
+// --------------------------------------------------------------------
+// for / for in / for of / forEach
+
+// 배열의 모든 원소의 합 구하기
+let arr = [1, 2, 3, ..., 9, 10];
+let result = 0;
