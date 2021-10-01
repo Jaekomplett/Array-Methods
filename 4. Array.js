@@ -394,6 +394,26 @@ if(str === str.toLowerCase()){
 // --------------------------------------------------------------------
 // for / for in / for of / forEach
 
-// 배열의 모든 원소의 합 구하기
-let arr = [1, 2, 3, ..., 9, 10];
+// 반복문을 통해 배열의 모든 원소의 합 구하기
+let arr = [1, 2, 3, 9, 10];
 let result = 0;
+
+// 1. for
+for (let i = 0; i < arr.length; i++){
+  result = result + arr[i]; // result += arr[i]; // 25
+}
+
+// 2. for in
+for (let i in arr){
+  result += arr[i]  // 25
+}
+
+// 3. for of 
+for (let i of arr){
+  result += i;     // 25
+}
+
+// 4. forEach - 오직 Array 객체에서만 사용이 가능하다.
+arr.forEach(x => {
+  result += x;     // 25
+});
